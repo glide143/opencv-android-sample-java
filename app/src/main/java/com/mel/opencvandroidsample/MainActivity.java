@@ -85,11 +85,11 @@ public class MainActivity extends AppCompatActivity implements CvCameraViewListe
         super.onResume();
 
         if(!OpenCVLoader.initDebug()) {
-            Log.e("OpenCV", "Unable to load OpenCV!");
+            Log.e(TAG, "Unable to load OpenCV!");
             OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, this,
                     mLoaderCallback);
         } else {
-            Log.d("OpenCV", "OpenCV loaded Successfully!");
+            Log.d(TAG, "OpenCV loaded Successfully!");
             mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
         }
     }
